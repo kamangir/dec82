@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-function abcli_install_blue_plugin() {
+function abcli_install_dec82() {
     abcli_log "Installing..."
 }
 
-abcli_install_module blue_plugin 101
+abcli_install_module dec82 101
