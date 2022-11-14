@@ -1,5 +1,5 @@
 NAME = "dec82"
 
-VERSION = "3.4.1"
+VERSION = "3.5.1"
 
 from .functions import *

@@ -19,4 +19,9 @@ Details coming soon to [blue brackets](https://github.com/kamangir/blue-bracket)
 ## Hardware Setup
 
 1. Follow the [instructions to set up a headless Raspberry Pi](https://github.com/kamangir/awesome-bash-cli/wiki/Raspberry-Pi) w/ [`abcli`](https://github.com/kamangir/awesome-bash-cli).
-2. 🚧
+2. Open a terminal and type in,
+```bash
+abcli cookie copy dec82
+abcli init
+```
+3. 🚧
