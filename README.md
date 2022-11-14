@@ -2,4 +2,21 @@
 
 A wearable Raspberry Pi + Grove + Camera.
 
+## Dev Env Set-up
+
+1. On a Mac or Linux machine install [`abcli`](https://github.com/kamangir/awesome-bash-cli).
+2. open a terminal and type in,
+```bash
+abcli git clone dec82 install
+```
+
+## Hardware Build
+
+Details coming soon to [blue brackets](https://github.com/kamangir/blue-bracket). 🚧 
+
 ![20221113_141520](https://user-images.githubusercontent.com/1007567/201549578-87e6f84c-6c79-4a4b-8fd1-343c3ed77519.jpg)
+
+## Hardware Setup
+
+1. Follow the [instructions to set up a headless Raspberry Pi](https://github.com/kamangir/awesome-bash-cli/wiki/Raspberry-Pi) w/ [`abcli`](https://github.com/kamangir/awesome-bash-cli).
+2. 🚧
