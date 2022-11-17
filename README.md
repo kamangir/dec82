@@ -27,6 +27,8 @@ Open a terminal and type in,
 # rpi
 abcli cookie copy dec82
 abcli init
+sudo raspi-config
+# enable camera and I2C
 ```
 
 🚧
