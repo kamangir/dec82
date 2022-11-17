@@ -24,6 +24,9 @@ Follow the [instructions to set up a headless Raspberry Pi](https://github.com/k
 Open a terminal and type in,
 
 ```bash
+# ssh
+abcli ssh rpi <machine-name>
+
 # rpi
 abcli cookie copy dec82
 abcli init
