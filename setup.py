@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from blue_plugin import NAME, VERSION
+from dec82 import NAME, VERSION
 
 setup(
     name=NAME,
