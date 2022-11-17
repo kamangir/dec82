@@ -9,13 +9,13 @@ parser = argparse.ArgumentParser(NAME, description=f"{NAME}-{VERSION}")
 parser.add_argument(
     "task",
     type=str,
-    help="TBD",
+    help="validate_hardware",
 )
 args = parser.parse_args()
 
 success = False
-if args.task == "TBD":
-    success = True
+if args.task == "validate_hardware":
+    success = validate_hardware()
 else:
     logger.error(f"-{NAME}: {args.task}: command not found.")
 
