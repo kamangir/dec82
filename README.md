@@ -1,7 +1,5 @@
 # dec82
 
-A wearable Raspberry Pi + Grove + Camera.
-
 To install the development environment on a Mac or Linux machine install [`abcli`](https://github.com/kamangir/awesome-bash-cli). Then open a terminal and type in,
 
 ```bash
