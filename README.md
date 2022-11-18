@@ -31,7 +31,8 @@ abcli ssh rpi <machine-name>
 abcli cookie copy dec82
 abcli init
 sudo raspi-config
-# enable camera and I2C
+# enable camera and I2C, reboot, and ssh back in.
+dec82 validate_hardware
 ```
 
 🚧
