@@ -20,6 +20,7 @@ abcli ssh rpi <rpi-hostname>
 # rpi
 abcli cookie copy dec82
 abcli init
+
 sudo raspi-config
 # enable camera and I2C, reboot, and ssh back in.
 
