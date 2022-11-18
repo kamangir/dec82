@@ -1,6 +1,6 @@
 # dec82
 
-To install the development environment install [`abcli`](https://github.com/kamangir/awesome-bash-cli), then open a terminal and type in,
+To set up the development environment install [`abcli`](https://github.com/kamangir/awesome-bash-cli), then open a terminal and type in,
 
 ```bash
 abcli git clone dec82 install
