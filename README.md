@@ -13,13 +13,13 @@ abcli git clone dec82 install
 
 Follow [these instructions]()🚧 instructions to build the hardware.
 
-Follow [these instructions](https://github.com/kamangir/awesome-bash-cli/wiki/Raspberry-Pi) to set up a headless Raspberry Pi w/ [`abcli`](https://github.com/kamangir/awesome-bash-cli) enabled. Name this machine `<<machine-name>`.
+Follow [these instructions](https://github.com/kamangir/awesome-bash-cli/wiki/Raspberry-Pi) to set up a headless Raspberry Pi w/ [`abcli`](https://github.com/kamangir/awesome-bash-cli) enabled.
 
 In your development environment, open a terminal and type in,
 
 ```bash
 # ssh
-abcli ssh rpi <machine-name>
+abcli ssh rpi <rpi-hostname>
 
 # rpi
 abcli cookie copy dec82
