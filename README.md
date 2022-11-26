@@ -27,4 +27,12 @@ sudo raspi-config
 grove validate button
 ```
 
+🚧 image of interaction w/ the button
+
+```bash
+grove validate oled_128x64
+```
+
+![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-3.jpg)
+
 🚧
