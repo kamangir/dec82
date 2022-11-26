@@ -6,8 +6,7 @@ To set up the development environment install [`abcli`](https://github.com/kaman
 abcli git clone dec82 install
 ```
 
-| ![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-1.jpg) | ![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-2.jpg) | ![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-3.jpg) |
-|---|---|---|
+![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-1.jpg)
 
 To build the hardware, follow [these instructions](https://github.com/kamangir/blue-bracket/blob/main/designs/dec82.md). Then follow [these instructions](https://github.com/kamangir/awesome-bash-cli/wiki/Raspberry-Pi) to set up a headless Raspberry Pi w/ [`abcli`](https://github.com/kamangir/awesome-bash-cli) enabled.
 
