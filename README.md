@@ -3,6 +3,7 @@
 To set up the development environment install [`abcli`](https://github.com/kamangir/awesome-bash-cli), then open a terminal and type in,
 
 ```bash
+# dev
 abcli git clone dec82 install
 ```
 
@@ -13,7 +14,7 @@ To build the hardware, follow [these instructions](https://github.com/kamangir/b
 In your development environment, open a terminal and type in,
 
 ```bash
-# ssh
+# dev
 abcli ssh rpi <rpi-hostname>
 
 # rpi
