@@ -24,14 +24,9 @@ sudo raspi-config
 # enable camera and I2C, reboot, and ssh back in.
 
 grove validate button
-```
-
-![image](https://user-images.githubusercontent.com/1007567/204118904-fc9a3173-1e1d-42e2-af21-eb2e1947d965.png)
-
-```bash
 grove validate oled_128x64
 ```
 
-![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-3.jpg)
+![image](https://user-images.githubusercontent.com/1007567/204118904-fc9a3173-1e1d-42e2-af21-eb2e1947d965.png)
 
 🚧
