@@ -9,6 +9,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+RST = None  # on the PiOLED this pin isnt used
+
 
 class Dec82(object):
     def __init__(self):
