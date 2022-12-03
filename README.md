@@ -22,12 +22,9 @@ abcli cookie copy dec82
 abcli init
 
 sudo raspi-config
-# enable camera and I2C, reboot, and ssh back in.
-
-grove validate button
-grove validate oled_128x64
+# Interface Options -> Camera -> Yes
+# Interface Options -> I2C -> Yes
+# Interface Options -> SSH -> Yes
+# System Options -> Boot / Auto Login -> Console Autologin
+# Reboot.
 ```
-
-![image](https://user-images.githubusercontent.com/1007567/204118904-fc9a3173-1e1d-42e2-af21-eb2e1947d965.png)
-
-🚧
