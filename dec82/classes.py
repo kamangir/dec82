@@ -1,5 +1,4 @@
 from abcli.modules.cookie import cookie
-from abcli.timer import Timer
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 from PIL import Image
@@ -16,11 +15,6 @@ RST = None  # on the PiOLED this pin isnt used
 class Dec82(object):
     def __init__(self):
         logger.info(f"{self.__class__.__name__} initialized.")
-
-        self.timer = Timer(
-            cookie.get("dec82.screen.period", 1),
-            "dec82.screen.period",
-        )
 
         self.line_count = 8
         self.line_length = 21
@@ -68,8 +62,7 @@ class Dec82(object):
         ...
 
     def update_screen(self, session):
-        if self.timer.tick("wait"):
-            self.history = self.history[1:]
+        self.history = self.history[1:]
 
         if len(self.history) < self.line_count:
             self.history += (" | ".join(session.signature())).split(" | ")
