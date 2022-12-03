@@ -17,7 +17,7 @@ class Dec82(object):
         logger.info(f"{self.__class__.__name__} initialized.")
 
         self.timer = Timer(
-            cookie.get("dec82.screen.period", 3),
+            cookie.get("dec82.screen.period", 1),
             "dec82.screen.period",
         )
 
@@ -51,6 +51,9 @@ class Dec82(object):
         self.font = ImageFont.load_default()
 
     def step(self, session):
+        ...
+
+    def update_screen(self, session):
         if not self.log:
             self.log = (" | ".join(session.signature())).split(" | ")
 
@@ -73,6 +76,3 @@ class Dec82(object):
 
         self.display.image(self.image)
         self.display.display()
-
-    def update_screen(self, session):
-        print("Dec82.update_screen()")
