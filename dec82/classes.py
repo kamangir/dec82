@@ -54,7 +54,7 @@ class Dec82(object):
 
         self.font = ImageFont.load_default()
 
-    def log(line):
+    def log(self, line):
         self.history = self.line_count([""]) + ["", line, ""]
 
     def process_image(self, frame, image):
