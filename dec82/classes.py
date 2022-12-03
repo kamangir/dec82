@@ -5,6 +5,7 @@ import Adafruit_SSD1306
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+from abcli import string
 import logging
 
 logger = logging.getLogger(__name__)
@@ -22,6 +23,9 @@ class Dec82(object):
         )
 
         self.line_count = 8
+        self.line_length = 21
+
+        self.hr = self.line_length * ["-"]
 
         self.log = []
 
@@ -52,6 +56,21 @@ class Dec82(object):
 
         self.font = ImageFont.load_default()
 
+    def process_image(self, frame, image):
+        self.log += [
+            self.hr,
+            f"frame #{frame}: {string.pretty_shape_of_matrix(image)}"
+            self.hr,
+        ]
+
+    def process_message(self, messages):
+        self.log += [
+            self.hr,
+            message.process_message(),
+            self.hr,
+        ]
+        return None
+
     def step(self, session):
         ...
 
@@ -68,7 +87,7 @@ class Dec82(object):
             fill=0,
         )
 
-        for row in range(min(8, len(self.log))):
+        for row in range(min(self.line_count, len(self.log))):
             self.draw.text(
                 (0, self.top + 8 * row),
                 self.log[row],
