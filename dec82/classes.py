@@ -59,14 +59,18 @@ class Dec82(object):
     def process_image(self, frame, image):
         self.log += [
             self.hr,
+            "",
             f"frame #{frame}: {string.pretty_shape_of_matrix(image)}",
+            "",
             self.hr,
         ]
 
     def process_message(self, messages):
         self.log += [
             self.hr,
+            "",
             message.process_message(),
+            "",
             self.hr,
         ]
         return None
