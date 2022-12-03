@@ -54,7 +54,7 @@ class Dec82(object):
     def process_image(self, frame, image):
         self.log(f"frame #{frame}: {string.pretty_shape_of_matrix(image)}")
 
-    def process_message(self, messages):
+    def process_message(self, message):
         self.log(message.process_message())
         return None
 
