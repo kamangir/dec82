@@ -16,6 +16,9 @@ class Dec82(object):
 
         self.log = []
 
-    def step(self):
+    def step(self, session):
         if self.timer.tick("wait"):
             self.log = self.log[1:]
+
+    def update_screen(self, session):
+        print("Dec82.update_screen()")
