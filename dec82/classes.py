@@ -52,7 +52,7 @@ class Dec82(object):
 
     def step(self, session):
         if not self.log:
-            self.log = " | ".join(session.signature())
+            self.log = (" | ".join(session.signature())).split(" | ")
 
         if self.timer.tick("wait"):
             self.log = self.log[1:]
