@@ -80,10 +80,10 @@ class Dec82(object):
             fill=0,
         )
 
-        for row in range(min(self.line_count, len(self.log))):
+        for row in range(min(self.line_count, len(self.history))):
             self.draw.text(
                 (0, self.top + 8 * row),
-                self.log[row],
+                self.history[row],
                 font=self.font,
                 fill=255,
             )
