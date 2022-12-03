@@ -55,7 +55,7 @@ class Dec82(object):
         self.font = ImageFont.load_default()
 
     def log(self, line):
-        self.history = self.line_count([""]) + ["", line, ""]
+        self.history = self.line_count * ([""]) + ["", line, ""]
 
     def process_image(self, frame, image):
         self.log(f"frame #{frame}: {string.pretty_shape_of_matrix(image)}")
