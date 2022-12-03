@@ -17,11 +17,11 @@ class Dec82(object):
         logger.info(f"{self.__class__.__name__} initialized.")
 
         self.timer = Timer(
-            cookie.get("dec82.screen.period", 10),
+            cookie.get("dec82.screen.period", 3),
             "dec82.screen.period",
         )
 
-        self.log = []
+        self.log = " | ".join(session.signature())
 
         # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
         self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
@@ -53,10 +53,6 @@ class Dec82(object):
     def step(self, session):
         if self.timer.tick("wait"):
             self.log = self.log[1:]
-
-            self.log += session.signature()
-
-        print(self.log)
 
         self.draw.rectangle(
             (0, 0, self.display.width, self.display.height),
