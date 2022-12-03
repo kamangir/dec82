@@ -23,7 +23,7 @@ class Dec82(object):
 
         self.line_count = 8
 
-        self.log = ""
+        self.log = []
 
         # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
         self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
