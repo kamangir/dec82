@@ -21,7 +21,9 @@ class Dec82(object):
             "dec82.screen.period",
         )
 
-        self.log = None
+        self.line_count = 8
+
+        self.log = ""
 
         # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
         self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
@@ -54,11 +56,11 @@ class Dec82(object):
         ...
 
     def update_screen(self, session):
-        if self.log is None:
-            self.log = (" | ".join(session.signature())).split(" | ")
+        if len(self.log) < self.line_count:
+            self.log += (" | ".join(session.signature())).split(" | ")
 
         if self.timer.tick("wait"):
-            self.log = self.log[1:] + [self.log[0]]
+            self.log = self.log[1:]
 
         self.draw.rectangle(
             (0, 0, self.display.width, self.display.height),
