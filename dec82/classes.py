@@ -59,7 +59,7 @@ class Dec82(object):
     def process_image(self, frame, image):
         self.log += [
             self.hr,
-            f"frame #{frame}: {string.pretty_shape_of_matrix(image)}"
+            f"frame #{frame}: {string.pretty_shape_of_matrix(image)}",
             self.hr,
         ]
 
