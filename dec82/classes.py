@@ -68,11 +68,11 @@ class Dec82(object):
         ...
 
     def update_screen(self, session):
-        if len(self.history) < self.line_count:
-            self.history += (" | ".join(session.signature())).split(" | ")
-
         if self.timer.tick("wait"):
             self.history = self.history[1:]
+
+        if len(self.history) < self.line_count:
+            self.history += (" | ".join(session.signature())).split(" | ")
 
         self.draw.rectangle(
             (0, 0, self.display.width, self.display.height),
@@ -80,7 +80,7 @@ class Dec82(object):
             fill=0,
         )
 
-        for row in range(min(self.line_count, len(self.history))):
+        for row in range(self.line_count):
             self.draw.text(
                 (0, self.top + 8 * row),
                 self.history[row],
