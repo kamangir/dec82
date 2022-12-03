@@ -21,7 +21,7 @@ class Dec82(object):
             "dec82.screen.period",
         )
 
-        self.log = " | ".join(session.signature())
+        self.log = ""
 
         # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
         self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
@@ -51,6 +51,9 @@ class Dec82(object):
         self.font = ImageFont.load_default()
 
     def step(self, session):
+        if not self.log:
+            self.log = " | ".join(session.signature())
+
         if self.timer.tick("wait"):
             self.log = self.log[1:]
 
