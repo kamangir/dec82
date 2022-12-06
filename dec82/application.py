@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 RST = None  # on the PiOLED this pin isnt used
 
 
-class Dec82(object):
+class Application(object):
     def __init__(self):
         logger.info(f"{self.__class__.__name__} initialized.")
 

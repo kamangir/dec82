@@ -1,6 +1,5 @@
 NAME = "dec82"
 
-VERSION = "4.33.1"
+VERSION = "5.1.1"
 
-from .classes import *
-from .functions import *
+from .application import *
