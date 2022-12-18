@@ -19,7 +19,7 @@ To install the software, follow [these instructions](https://github.com/kamangir
 abcli ssh rpi <rpi-hostname>
 
 # rpi
-abcli cookie copy dec82
+abcli cookie copy dec82q # or dec82
 abcli init
 
 sudo raspi-config
@@ -29,5 +29,6 @@ sudo raspi-config
 # System Options -> Boot / Auto Login -> Console Autologin
 # Reboot.
 ```
+
 
 To interact w/ the device, press and hold the button for less than `3 s` to take a picture and more than `10 s` to shut down the device. Hold more than `3 s` and less than `10 s` initiates an update and reboot of the application.
