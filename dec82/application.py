@@ -2,7 +2,6 @@ from abcli.modules.cookie import cookie
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
-from dec82.sparkfun_qwiic import Sparkfun_Qwiic_Display
 from abcli import string
 import logging
 
@@ -15,25 +14,22 @@ class Application(object):
     def __init__(self):
         self.kind = cookie.read("hat.kind", "else")
 
-        logger.info(f"{self.__class__.__name__} initialized.")
+        logger.info(f"{self.__class__.__name__}({self.kind}) initialized.")
 
         self.line_count = 8
         self.line_length = 21
 
         self.history = []
 
-        if self.kind == "grove":
-            import Adafruit_SSD1306
+        # TODO: move to blue_sbc.screen.grove
+        import Adafruit_SSD1306
 
-            # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
-            self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
+        # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
+        self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
 
-            self.display.begin()
-            self.display.clear()
-            self.display.display()
-
-        else:
-            self.display = Sparkfun_Qwiic_Display()
+        self.display.begin()
+        self.display.clear()
+        self.display.display()
 
         self.image = Image.new(
             "1",
@@ -88,6 +84,6 @@ class Application(object):
                 fill=255,
             )
 
-        if self.kind == "grove":
-            self.display.image(self.image)
-            self.display.display()
+        # TODO: move to blue_sbc.screen.grove
+        self.display.image(self.image)
+        self.display.display()
