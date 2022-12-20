@@ -28,7 +28,8 @@ sudo raspi-config
 # Interface Options -> I2C -> Yes
 # Interface Options -> SSH -> Yes
 # System Options -> Boot / Auto Login -> Console Autologin
-# if dec82q: add overscan TODO
+# if dec82q: Advanced Options -> Overscan -> No
+# if dec82q: Interface Options -> SPI -> Yes
 # Reboot.
 ```
 
