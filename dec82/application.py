@@ -1,9 +1,8 @@
 from abcli.modules.cookie import cookie
-import Adafruit_GPIO.SPI as SPI
-import Adafruit_SSD1306
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+from dec82.sparkfun_qwiic import Sparkfun_Qwiic_Display
 from abcli import string
 import logging
 
@@ -14,6 +13,8 @@ RST = None  # on the PiOLED this pin isnt used
 
 class Application(object):
     def __init__(self):
+        self.kind = cookie.read("hat.kind", "else")
+
         logger.info(f"{self.__class__.__name__} initialized.")
 
         self.line_count = 8
@@ -21,12 +22,18 @@ class Application(object):
 
         self.history = []
 
-        # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
-        self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
+        if self.kind == "grove":
+            import Adafruit_SSD1306
 
-        self.display.begin()
-        self.display.clear()
-        self.display.display()
+            # https://github.com/IcingTomato/Seeed_Python_SSD1315/blob/master/examples/stats.py
+            self.display = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
+
+            self.display.begin()
+            self.display.clear()
+            self.display.display()
+
+        else:
+            self.display = Sparkfun_Qwiic_Display()
 
         self.image = Image.new(
             "1",
@@ -81,5 +88,6 @@ class Application(object):
                 fill=255,
             )
 
-        self.display.image(self.image)
-        self.display.display()
+        if self.kind == "grove":
+            self.display.image(self.image)
+            self.display.display()
