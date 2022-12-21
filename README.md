@@ -9,7 +9,7 @@ abcli git clone dec82 install
 
 To build the hardware, follow [these instructions](https://github.com/kamangir/blue-bracket/blob/main/designs/dec82.md).
 
-| ![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-1.jpg) | ![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-9.jpg) |
+| [![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-1.jpg)](https://github.com/kamangir/blue-bracket/blob/main/designs/dec82.md) | [![image](https://github.com/kamangir/blue-bracket/raw/main/images/dec82-9.jpg)](https://github.com/kamangir/blue-bracket/blob/main/designs/dec82.md) |
 |---|---| 
 | `dec82`, uses [grove](https://wiki.seeedstudio.com/Grove_System/) parts. | `dec82q`, uses [qwiic](https://www.sparkfun.com/qwiic) parts. |
 
