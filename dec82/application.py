@@ -12,7 +12,7 @@ RST = None  # on the PiOLED this pin isnt used
 
 class Application(object):
     def __init__(self):
-        self.kind = cookie.read("hat.kind", "other")
+        self.kind = cookie.read("hardware.kind", "other")
 
         logger.info(f"{self.__class__.__name__}({self.kind}) initialized.")
 
