@@ -1,9 +1,9 @@
-from blue_sbc.application import Application
+from blue_sbc import application
 import logging
 
 logger = logging.getLogger(__name__)
 
 
-class Dec82(Application):
+class Application(application.Application):
     def __init__(self):
-        super(Dec82, self).__init__()
+        super().__init__()
