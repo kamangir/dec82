@@ -21,9 +21,10 @@ function dec82() {
 function dec82_session() {
     abcli_log "dec82: session started."
 
-    blue_sbc_session start \
-        - \
-        --application=dec82
+    blue_sbc_session \
+        "$1" \
+        $(abcli_option_default "$2" app Dec82) \
+        ${@:3} \
 
     abcli_log "dec82: session ended."
 }
