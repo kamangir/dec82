@@ -23,7 +23,7 @@ function dec82_session() {
 
     blue_sbc_session \
         "$1" \
-        $(abcli_option_default "$2" app Dec82) \
+        $(abcli_option_default "$2" app dec82) \
         ${@:3} \
 
     abcli_log "dec82: session ended."
