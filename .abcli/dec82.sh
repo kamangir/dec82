@@ -21,9 +21,13 @@ function dec82() {
 function dec82_session() {
     abcli_log "dec82: session started."
 
+    local options=$2
+    local options=$(abcli_option_default "$options" app dec82)
+    local options=$(abcli_option_default "$options" sudo 1)
+
     blue_sbc_session \
         "$1" \
-        $(abcli_option_default "$2" app dec82) \
+        "$options" \
         ${@:3} \
 
     abcli_log "dec82: session ended."
