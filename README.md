@@ -33,4 +33,10 @@ sudo raspi-config
 # Reboot.
 ```
 
+# [`dec82`](https://github.com/kamangir/blue-bracket/blob/main/designs/dec82.md)
+
 To interact w/ the device, press and hold the button for less than `3 s` to take a picture and more than `5 s` to shut down the device. Hold more than `3 s` and less than `10 s` initiates an update and reboot of the application.
+
+[`dec82q`](https://github.com/kamangir/blue-bracket/blob/main/designs/dec82q.md)
+
+🚧
