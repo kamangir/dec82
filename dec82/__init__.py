@@ -1,5 +1,5 @@
 NAME = "dec82"
 
-VERSION = "6.8.1"
+VERSION = "6.9.1"
 
 from .application import *

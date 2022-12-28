@@ -39,4 +39,8 @@ To interact w/ the device, press and hold the button for less than `3 s` to take
 
 # [`dec82q`](https://github.com/kamangir/blue-bracket/blob/main/designs/dec82q.md)
 
-🚧
+```bash
+sudo nano /boot/config.txt
+```
+
+Add the following line: `dtoverlay=rpi-display,speed=32000000,rotate=270` ([source](https://learn.sparkfun.com/tutorials/sparkfun-top-phat-hookup-guide/24-tft-display-linux-54-update)).
