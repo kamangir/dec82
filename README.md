@@ -44,3 +44,5 @@ sudo nano /boot/config.txt
 ```
 
 Add the following line: `dtoverlay=rpi-display,speed=32000000,rotate=270` ([source](https://learn.sparkfun.com/tutorials/sparkfun-top-phat-hookup-guide/24-tft-display-linux-54-update)).
+
+To interact w/ the device, press `a` to update and `b` to shutdown. Press `center` to take a picture and adjust led intensity with `up` and `down`.
